@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://valerialazarinfo-lab.github.io/brasilissima/sitemap.xml
