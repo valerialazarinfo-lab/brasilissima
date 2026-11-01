@@ -12,11 +12,11 @@
 <meta property="og:title" content="Brasilissima · Maquilhagem permanente em Lisboa">
 <meta property="og:description" content="Sobrancelhas, lábios e eyeliner com um resultado natural. Estúdio em Lisboa, sempre por marcação.">
 <meta property="og:url" content="https://valerialazarinfo-lab.github.io/brasilissima/">
-<meta property="og:image" content="https://valerialazarinfo-lab.github.io/brasilissima/DPo0rrFCJ59.jpg">
-<meta property="og:image:width" content="640">
-<meta property="og:image:height" content="640">
+<meta property="og:image" content="https://valerialazarinfo-lab.github.io/brasilissima/hero.webp">
+<meta property="og:image:width" content="1000">
+<meta property="og:image:height" content="1250">
 <meta name="twitter:card" content="summary">
-<link rel="preload" as="image" href="DPo0rrFCJ59.jpg" fetchpriority="high">
+<link rel="preload" as="image" href="hero.webp" imagesrcset="hero-m.webp 550w, hero.webp 1000w" imagesizes="(max-width:900px) 78vw, 460px" fetchpriority="high">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,28,400;0,28,500;1,28,400;1,28,500&family=Jost:wght@400;500&display=swap">
@@ -1057,7 +1057,26 @@ h2 .tbc::after{font-size:10px}
 /* tablet: the professional card stacks earlier and the 'to confirm' pills sit under their text */
 .pro-list .tbc::after{display:block;width:max-content;max-width:100%;margin:6px 0 0;white-space:normal}
 @media (max-width:900px){.pro{grid-template-columns:1fr}.pro-mono{max-width:240px}.pro-list li{grid-template-columns:1fr}}
-</style>
+
+/* ===== v3: real photography direction ===== */
+.ph-ill{position:absolute;z-index:2;right:12px;bottom:12px;font-size:10.5px;letter-spacing:.08em;padding:4px 10px;border-radius:999px;background:rgba(246,239,231,.88);color:var(--ink);pointer-events:none}
+.hero2-ph .ph-ill{right:auto;left:50%;transform:translateX(-50%);bottom:14px}
+.hero2-ph img{object-position:50% 30%}
+/* the experience: an editorial pair of photos with the brand initial, no placeholders */
+.pro2{margin-top:clamp(64px,8vw,110px);display:grid;grid-template-columns:1fr 1fr;gap:clamp(30px,6vw,96px);align-items:center}
+.pro2-art{position:relative;min-height:clamp(380px,42vw,560px)}
+.pro2-a,.pro2-b{position:absolute;margin:0;overflow:hidden;box-shadow:0 40px 70px -40px rgba(58,29,19,.5)}
+.pro2-a{left:0;top:0;width:64%;aspect-ratio:4/5;border-radius:999px 999px 8px 8px}
+.pro2-b{right:0;bottom:0;width:46%;aspect-ratio:4/5;border:10px solid var(--ivory)}
+.pro2-a img,.pro2-b img{width:100%;height:100%;object-fit:cover}
+.pro2-mark{position:absolute;right:4%;top:-4%;margin:0;font-family:var(--serif);font-style:italic;font-size:clamp(120px,14vw,200px);line-height:1;color:rgba(176,125,91,.18);pointer-events:none}
+.pro2-lead{font-size:clamp(17px,1.5vw,19px);color:var(--ink-soft);max-width:46ch}
+.pro2-list{list-style:none;margin:24px 0;padding:0;display:grid;grid-template-columns:1fr 1fr;gap:20px 28px}
+.pro2-list li{display:grid;gap:4px;padding-top:14px;border-top:1px solid var(--champagne);min-width:0}
+.pro2-list b{font-family:var(--serif);font-weight:500;font-size:20px;color:var(--choc)}
+.pro2-list span{font-size:15.5px;color:var(--ink-soft)}
+@media (max-width:900px){.pro2{grid-template-columns:1fr}.pro2-art{min-height:clamp(340px,90vw,480px);max-width:520px}}
+@media (max-width:520px){.pro2-list{grid-template-columns:1fr}}</style>
 
 <a class="skip" href="#conteudo">Saltar para o conteúdo</a>
 <div class="prog" id="prog" aria-hidden="true"></div>
@@ -1106,7 +1125,8 @@ h2 .tbc::after{font-size:10px}
         </ul>
       </div>
       <div class="hero2-art" aria-hidden="false">
-        <figure class="hero2-ph"><img src="DPo0rrFCJ59.jpg" alt="Sobrancelhas com fios desenhados um a um, trabalho da Brasilissima" width="640" height="640" fetchpriority="high" decoding="async"></figure>
+        <!-- HERO PHOTO: illustrative (Unsplash, see IMAGENS.md). Replace hero.webp and hero-m.webp with the studio's own to swap it. -->
+        <figure class="hero2-ph"><img src="hero.webp" srcset="hero-m.webp 550w, hero.webp 1000w" sizes="(max-width:900px) 78vw, 460px" alt="Rosto feminino com sobrancelhas definidas, eyeliner delicado e lábios naturais" width="1000" height="1250" fetchpriority="high" decoding="async"><span class="ph-ill">Imagem ilustrativa</span></figure>
         <p class="hero2-badge"><span>Brows</span><i aria-hidden="true">·</i><span>Lips</span><i aria-hidden="true">·</i><span>Eyeliner</span></p>
       </div>
     </div>
@@ -1197,18 +1217,22 @@ h2 .tbc::after{font-size:10px}
         </div>
       </div>
 
-      <div class="pro rv" aria-labelledby="h-pro">
-        <div class="pro-mono" aria-hidden="true"><span>B</span></div>
+      <!-- THE BRASILISSIMA EXPERIENCE: only confirmed facts. When the studio sends the professional's name, photo and background, add a personal block here. -->
+      <div class="pro2" aria-labelledby="h-pro">
+        <div class="pro2-art" aria-hidden="false">
+          <figure class="pro2-a" id="proph1"></figure>
+          <figure class="pro2-b" id="proph2"></figure>
+          <p class="pro2-mark" aria-hidden="true">B</p>
+        </div>
         <div class="pro-txt">
-          <p class="eyebrow">A profissional</p>
-          <h2 class="h-sm" id="h-pro">Padrão <em>Brasilissima</em></h2>
-          <p class="pro-name"><span class="tbc" data-tbc="A confirmar">Nome da profissional</span></p>
-          <p>Maquilhagem permanente natural, num estúdio em Lisboa e a chegar a outras cidades europeias. Um atendimento de cada vez, sempre por marcação.</p>
-          <ul class="pro-list">
-            <li><b>Especialização</b><span>Sobrancelhas (nanoblading e microblading), lábios e eyeliner.</span></li>
-            <li><b>Experiência e formação</b><span class="tbc" data-tbc="A confirmar com o estúdio">Anos de experiência e formações a apresentar aqui.</span></li>
-            <li><b>Higiene e segurança</b><span class="tbc" data-tbc="A confirmar com o estúdio">Materiais e cuidados de higiene a descrever aqui.</span></li>
-            <li><b>Atendimento</b><span>Desenho e cor combinados consigo antes de começar, e cuidados explicados no fim.</span></li>
+          <p class="eyebrow">A experiência</p>
+          <h2 class="h-sm" id="h-pro">O padrão <em>Brasilissima</em>.</h2>
+          <p class="pro2-lead">Maquilhagem permanente natural, pensada para realçar e não para transformar. Um estúdio em Lisboa, a chegar a outras cidades europeias.</p>
+          <ul class="pro2-list">
+            <li><b>Só maquilhagem permanente</b><span>Sobrancelhas, lábios e eyeliner: é este o trabalho do estúdio.</span></li>
+            <li><b>Natural, antes de tudo</b><span>Fios desenhados um a um e cor escolhida para o seu tom.</span></li>
+            <li><b>O desenho é seu</b><span>Combinado e aprovado consigo antes de começar.</span></li>
+            <li><b>Acompanhamento</b><span>Cuidados explicados no fim, e o WhatsApp sempre à mão.</span></li>
           </ul>
           <blockquote class="quote">“A micropigmentação tem o poder de renovar a sua autoestima.” <cite>Brasilissima, no Instagram</cite></blockquote>
           <div class="p-links"><a class="btn btn-wa" href="https://wa.me/351928034097" target="_blank" rel="noopener">WhatsApp 928 034 097</a><a class="link" href="tel:+351928034097">Ligar</a><a class="link" href="https://www.instagram.com/brasilissima.pt/" target="_blank" rel="noopener">Instagram</a></div>
@@ -1355,23 +1379,27 @@ h2 .tbc::after{font-size:10px}
   // onde: hero | comparador | resultados | metodo | espaco | tratamento:<id>
   var FOTOS=[
     // results gallery: the studio's own work (Instagram, 640 px). cat: sobrancelhas | labios | eyeliner | antes-depois
+    {src:'DPo0rrFCJ59.jpg',w:640,h:640,onde:'galeria',cat:'sobrancelhas',code:'DPo0rrFCJ59',foco:'50% 25%',alt:['Sobrancelhas com fios desenhados um a um',''],leg:['Fios desenhados um a um','']},
     {src:'DPMcB3dCDlD.jpg',w:640,h:640,onde:'galeria',cat:'sobrancelhas',code:'DPMcB3dCDlD',alt:['Sobrancelhas definidas com fios desenhados, vistas de cima',''],leg:['Sobrancelhas sempre definidas','']},
     {src:'C9R9WY4CDAN.jpg',w:640,h:640,onde:'galeria',cat:'sobrancelhas',code:'C9R9WY4CDAN',foco:'50% 20%',alt:['Sobrancelha com fios finos e naturais, em grande plano',''],leg:['Fios finos e naturais','']},
     {src:'C9VjwPmik38.jpg',w:360,h:640,onde:'galeria',cat:'labios',code:'C9VjwPmik38',foco:'50% 35%',alt:['Micropigmentação labial em curso, com o pigmento ao lado',''],leg:['Micropigmentação labial','']},
     {src:'DPRJoxHCP0n.jpg',w:361,h:640,onde:'metodo',foco:'50% 40%',alt:['Profissional de luvas a desenhar a sobrancelha de uma cliente no estúdio',''],leg:['O desenho, antes de começar','']},
-    // illustrative service photos, Unsplash licence (free for commercial use); replace with the studio's own when they send them
-    {src:'micro-sobrancelhas.jpg',w:1400,h:1050,onde:'tratamento:sobrancelhas:0',foco:'50% 35%',alt:['Profissional a trabalhar a sobrancelha de uma cliente','']},
-    {src:'remocao-micro.jpg',w:1400,h:933,onde:'tratamento:sobrancelhas:1',alt:['Mãos com luvas a trabalhar a pele com um aparelho de micropigmentação','']},
-    {src:'micro-labial.jpg',w:1120,h:1400,onde:'tratamento:labios:0',foco:'50% 55%',alt:['Lábios em grande plano com cor natural','']},
-    {src:'despigmentacao.jpg',w:1400,h:1237,onde:'tratamento:labios:1',foco:'50% 40%',alt:['Mãos com luvas a trabalhar junto a uma sobrancelha','']},
-    {src:'analise-pele.jpg',w:1400,h:931,onde:'tratamento:olhos:0',alt:['Profissional a observar o rosto de uma cliente','']},
+    // ---- illustrative photos (Unsplash licence, see IMAGENS.md). To swap for the studio's own photo, replace the file
+    //      in  with the same name (and its -m version), or change src here. ilu:1 shows the "Imagem ilustrativa" tag.
+    {src:'nanoblading.webp',w:1200,h:900,onde:'tratamento:sobrancelhas:0',ilu:1,foco:'50% 40%',alt:['Profissional a definir a forma das sobrancelhas de uma cliente','']},
+    {src:'microblading.webp',w:1200,h:900,onde:'tratamento:sobrancelhas:1',ilu:1,foco:'50% 35%',alt:['Profissional de luvas a tratar as sobrancelhas de uma cliente deitada','']},
+    {src:'labial.webp',w:1200,h:900,onde:'tratamento:labios:0',ilu:1,foco:'50% 60%',alt:['Lábios com cor natural, em grande plano','']},
+    {src:'combo.webp',w:1200,h:900,onde:'tratamento:labios:1',ilu:1,foco:'50% 45%',alt:['Rosto com sobrancelhas definidas e lábios de cor natural','']},
+    {src:'eyeliner.webp',w:1200,h:900,onde:'tratamento:olhos:0',ilu:1,foco:'50% 50%',alt:['Olho com um traço de eyeliner delicado','']},
+    {src:'filosofia.webp',w:900,h:1125,onde:'filosofia',ilu:1,alt:['Olhar natural com sobrancelhas suaves, em luz quente','']},
+    {src:'ambiente.webp',w:900,h:1125,onde:'ambiente',ilu:1,alt:['Balcão claro com prateleiras douradas num espaço de beleza','']},
     // the studio's own Instagram posts
     {src:'DPkKG_dCFKE.jpg',w:640,h:640,onde:'instagram',code:'DPkKG_dCFKE',alt:['Publicação: o poder da micropigmentação','']},
     {src:'DQcFm6DiFDv.jpg',w:640,h:640,onde:'instagram',code:'DQcFm6DiFDv',alt:['Publicação: está pronta para um glow up?','']},
     {src:'DQNGr-_iGPL.jpg',w:360,h:640,onde:'instagram',code:'DQNGr-_iGPL',foco:'50% 30%',alt:['Vídeo: o seu espaço de beleza preferido está a ligar','']}
   ];
   function fotos(onde){return FOTOS.filter(function(f){return f.onde===onde})}
-  function img(f,lazy,sizes){var i=el('img');i.src=f.src;var mw=Math.round(700*f.w/Math.max(f.w,f.h));i.srcset=f.src.replace(/\.jpg$/,'-m.jpg')+' '+mw+'w, '+f.src+' '+f.w+'w';i.sizes=sizes||'(max-width:760px) 100vw, 50vw';i.alt=L(f.alt);i.width=f.w;i.height=f.h;if(f.foco)i.style.objectPosition=f.foco;if(lazy){i.loading='lazy';i.decoding='async'}f._img=i;return i}
+  function img(f,lazy,sizes){var i=el('img');i.src=f.src;var mw=Math.round(700*f.w/Math.max(f.w,f.h));i.srcset=f.src.replace(/\.(jpg|webp)$/,'-m.$1')+' '+mw+'w, '+f.src+' '+f.w+'w';i.sizes=sizes||'(max-width:760px) 100vw, 50vw';i.alt=L(f.alt);i.width=f.w;i.height=f.h;if(f.foco)i.style.objectPosition=f.foco;if(lazy){i.loading='lazy';i.decoding='async'}f._img=i;return i}
 
   // hero: slow crossfade, one figure per hero photo
   fotos('hero').forEach(function(f,i){var fig=el('figure');if(i===0)fig.className='on';var hi=img(f,i>0,'(max-width:760px) 60vw, 100vw');if(i===0)hi.setAttribute('fetchpriority','high');fig.appendChild(hi);$('slides').appendChild(fig)});
@@ -1437,7 +1465,7 @@ h2 .tbc::after{font-size:10px}
     var g=$('tgrid');g.innerHTML='';$('tall').hidden=true;$('tall').textContent=T('Ver todos os '+NTRT+' tratamentos','Voir les '+NTRT+' soins');g.classList.remove('swap');void g.offsetWidth;g.classList.add('swap');
     var k=0;CATS.forEach(function(c){if(filter!=='all'&&filter!=='dest'&&filter!==c.id)return;c.items.forEach(function(it,i){if(filter==='dest'&&!it.dest&&!it.feat)return;
       var a=el('article','tcard'),ph=fotos('tratamento:'+c.id+':'+i)[0];
-      var top=el('div','tcard-ph'+(ph?'':' none'));if(ph){top.appendChild(img(ph,true,'(max-width:620px) 92vw, 340px'));if(/img\/servicos\//.test(ph.src))top.appendChild(el('span','tcard-ill',T('Imagem ilustrativa','Image d’illustration')))}top.appendChild(el('span','tcard-cat',L(c.t)));if(it.dest)a.classList.add('dest');a.appendChild(top);
+      var top=el('div','tcard-ph'+(ph?'':' none'));if(ph){top.appendChild(img(ph,true,'(max-width:620px) 92vw, 340px'));if(ph.ilu)top.appendChild(el('span','tcard-ill',T('Imagem ilustrativa','Image d’illustration')))}top.appendChild(el('span','tcard-cat',L(c.t)));if(it.dest)a.classList.add('dest');a.appendChild(top);
       var b=el('div','tcard-b');b.appendChild(el('h3',null,L(it.n)));if(it.b)b.appendChild(el('p','tcard-ben',L(it.b)));
       var m=el('p','tcard-m');if(it.s)m.appendChild(document.createTextNode(L(it.s)));if(m.childNodes.length)b.appendChild(m);
       b.appendChild(el('p','tcard-d',L(it.d)));
@@ -1469,7 +1497,9 @@ h2 .tbc::after{font-size:10px}
   }
 
   // method photo and the space gallery
-  function buildMetodo(){var f=fotos('metodo')[0];$('metodoph').innerHTML='';if(!f)return;$('metodoph').appendChild(img(f,true));if(f.leg)$('metodoph').appendChild(el('figcaption',null,L(f.leg)))}
+  // the Brasilissima experience: two editorial photos (illustrative) placed from FOTOS
+  function buildPro(){[['proph1','filosofia'],['proph2','ambiente']].forEach(function(p){var box=$(p[0]),f=fotos(p[1])[0];if(!box||!f)return;box.innerHTML='';box.appendChild(img(f,true,'(max-width:760px) 60vw, 340px'));if(f.ilu)box.appendChild(el('span','ph-ill',T('Imagem ilustrativa','Image d’illustration')))})}
+  function buildMetodo(){buildPro();var f=fotos('metodo')[0];$('metodoph').innerHTML='';if(!f)return;$('metodoph').appendChild(img(f,true));if(f.leg)$('metodoph').appendChild(el('figcaption',null,L(f.leg)))}
   function buildRooms(){$('rooms').innerHTML='';fotos('espaco').forEach(function(f){var fig=el('figure','room');var ph=el('div','ph');ph.appendChild(img(f,true));fig.appendChild(ph);var cap=el('figcaption');cap.appendChild(el('b',null,L(f.leg)));cap.appendChild(el('span',null,L(f.sub)));fig.appendChild(cap);$('rooms').appendChild(fig)})}
 
   // Instagram posts and client messages, linking to the original post
